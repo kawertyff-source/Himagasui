@@ -1,0 +1,46 @@
+jjk-boxing-online/
+│
+├── index.html
+├── main.js
+│
+├── config/
+│   ├── firebase.js
+│   ├── balanceConfig.js
+│   └── gameConfig.js
+│
+├── engine/
+│   ├── GameLoop.js
+│   ├── FrameEngine.js
+│   ├── HitboxSystem.js
+│   ├── CollisionSystem.js
+│   ├── AnimationSystem.js
+│   └── StateMachine.js
+│
+├── core/
+│   ├── Player.js
+│   ├── StatsSystem.js
+│   ├── StaminaSystem.js
+│   ├── GuardSystem.js
+│   ├── StatusSystem.js
+│   ├── DomainSystem.js
+│   └── CooldownSystem.js
+│
+├── skills/
+│   ├── destroyer/
+│   ├── speedster/
+│   ├── controller/
+│   ├── toxic/
+│   ├── summoner/
+│   └── forbidden/
+│
+├── multiplayer/
+│   ├── Lobby.js
+│   ├── RoomManager.js
+│   ├── SyncSystem.js
+│   ├── ServerValidation.js
+│   └── RankingSystem.js
+│
+└── ui/
+    ├── HUD.js
+    ├── SkillSelect.js
+    └── EffectsUI.js
