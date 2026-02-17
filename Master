@@ -1,46 +1,74 @@
-jjk-boxing-online/
-│
-├── index.html
-├── main.js
-│
-├── config/
-│   ├── firebase.js
-│   ├── balanceConfig.js
-│   └── gameConfig.js
-│
-├── engine/
-│   ├── GameLoop.js
-│   ├── FrameEngine.js
-│   ├── HitboxSystem.js
-│   ├── CollisionSystem.js
-│   ├── AnimationSystem.js
-│   └── StateMachine.js
-│
-├── core/
-│   ├── Player.js
-│   ├── StatsSystem.js
-│   ├── StaminaSystem.js
-│   ├── GuardSystem.js
-│   ├── StatusSystem.js
-│   ├── DomainSystem.js
-│   └── CooldownSystem.js
-│
-├── skills/
-│   ├── destroyer/
-│   ├── speedster/
-│   ├── controller/
-│   ├── toxic/
-│   ├── summoner/
-│   └── forbidden/
-│
-├── multiplayer/
-│   ├── Lobby.js
-│   ├── RoomManager.js
-│   ├── SyncSystem.js
-│   ├── ServerValidation.js
-│   └── RankingSystem.js
-│
-└── ui/
-    ├── HUD.js
-    ├── SkillSelect.js
-    └── EffectsUI.js
+/src
+ ├── core/
+ │    ├── GameLoop.ts
+ │    ├── Time.ts
+ │    ├── EventBus.ts
+ │    ├── StateMachine.ts
+ │
+ ├── engine/
+ │    ├── combat/
+ │    │     ├── CombatEngine.ts
+ │    │     ├── DamageSystem.ts
+ │    │     ├── FrameSystem.ts
+ │    │     ├── HitboxSystem.ts
+ │    │     ├── HurtboxSystem.ts
+ │    │     ├── GuardSystem.ts
+ │    │     ├── StatusEffectSystem.ts
+ │    │     ├── ComboSystem.ts
+ │    │
+ │    ├── movement/
+ │    │     ├── MovementController.ts
+ │    │     ├── DashSystem.ts
+ │    │     ├── TeleportSystem.ts
+ │    │
+ │    ├── stamina/
+ │    │     ├── StaminaSystem.ts
+ │
+ │    ├── domain/
+ │    │     ├── DomainExpansionSystem.ts
+ │
+ ├── characters/
+ │    ├── base/
+ │    │     ├── Character.ts
+ │    │     ├── CharacterStats.ts
+ │    │
+ │    ├── builds/
+ │    │     ├── Destroyer.ts
+ │    │     ├── Speedster.ts
+ │    │     ├── Controller.ts
+ │    │     ├── Toxic.ts
+ │    │     ├── Summoner.ts
+ │
+ ├── skills/
+ │    ├── Skill.ts
+ │    ├── SkillFactory.ts
+ │    ├── destroyer/
+ │    ├── speedster/
+ │    ├── controller/
+ │    ├── toxic/
+ │    ├── summoner/
+ │    ├── forbidden/
+ │
+ ├── ai/
+ │    ├── AIController.ts
+ │    ├── BehaviorTree.ts
+ │    ├── BossPhaseSystem.ts
+ │
+ ├── multiplayer/
+ │    ├── NetworkManager.ts
+ │    ├── ServerSync.ts
+ │    ├── ClientPrediction.ts
+ │    ├── LagCompensation.ts
+ │
+ ├── firebase/
+ │    ├── firebaseConfig.ts
+ │    ├── RoomService.ts
+ │    ├── PlayerService.ts
+ │    ├── MatchService.ts
+ │
+ ├── ui/
+ │    ├── HUD.ts
+ │    ├── HealthBar.ts
+ │    ├── FrameDisplay.ts
+ │
+ └── index.ts
